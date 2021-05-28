@@ -1,6 +1,7 @@
 This document describes the policy for updating the fwupd, fwupdate, fwupd-signed and fwupdate-signed packages to new upstream versions in a stable, supported distro (including LTS releases).
 
 fwupd is the firmware updating daemon used for performing updates on a variety of devices both in and out of OS.  Updates outside of the OS are performed using UEFI capsules.
+
 fwupd versions older than 1.1.x used the fwupdate package and its EFI binary for performing UEFI capsule updates.
 fwupd versions 1.1.x and newer have subsumed fwupdate and now maintains and fully manages the lifecycle of the EFI binary.
 
@@ -28,7 +29,7 @@ New versions of fwupd and fwupdate can both be SRU'ed into older releases provid
 
 On an Ubuntu release that uses fwupd but not fwupdate (after bionic):
 
-'''fwupd within the same stable release''': For example 1_1_X branch or 1_2_X branch. Just following the normal SRU process.
+'''fwupd within the same stable release''': For example 1_3_X to 1_3_Y branch. Just following the normal SRU process.
 
 '''fwupd across stable version''': For example, SRU from 1_3_X to 1_4_X branch. Need to perform full QA Process to finish the SRU process.
 
@@ -40,7 +41,7 @@ tarball releases only.  No backported individual patches.  If a tarball release 
 '''fwupd''':
 fwupd releases in the 1.0.x series.
 
-== QA Process across stable release ==
+== Full QA Process across stable release ==
 
 When a new version of fwupd (or fwupdate) is uploaded to -proposed, the following verification need to be done:
 
